@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Zacck Osiemo 
+	email = me@gmail.com
+[core]
+	excludesfile = /Users/zacck/.gitignore_global
+	editor = vim
