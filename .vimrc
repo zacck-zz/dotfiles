@@ -4,6 +4,8 @@ set tabstop=4
 set shiftwidth=4
 "Allow line numbers 
 set number
+"Allow relative numbers for jumping lines 
+set rnu 
 "Always display the status line
 set laststatus=2
 "Don't try to be compatible with Vi
@@ -34,7 +36,6 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 "check for errors on open and on save exit
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 "Use eslint with syntastic
 let g:syntastic_javascript_checkers = ['eslint']
@@ -64,4 +65,21 @@ set wildmenu
 
 "Create a `tags` file lets vim run the below on cmd 
 command! MakeTags !ctags -R .
+"Disable auto format to include files without @format 
+let g:prettier#autoformat = 0
+"Run prettier for every change async 
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+
+"Change prettier print width 
+let g:prettier#config#print_width = 80
+"Remove trailing commas with prettier
+let g:prettier#config#trailing_comma = 'none' 
+"Risky but might be worth it no semi colons
+let g:prettier#config#semi = 'false'
+"Use flow to parse 
+let g:prettier#config#parser = 'flow'
 
