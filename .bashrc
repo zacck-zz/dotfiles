@@ -11,7 +11,10 @@ alias buildapk='./gradlew assembleRelease'
 alias ls='ls -al'
 
 
+#modify terminal prompt 
+export PS1="\u 😈  \W $ "
 
+export PATH="$HOME/.fastlane/bin:$PATH"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export REACT_EDITOR=vim
 export PATH="/usr/local/share/npm/bin:$PATH"
