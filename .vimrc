@@ -1,3 +1,15 @@
+"break arrow keys habit"
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+nnoremap h <NOP>
+nnoremap j <NOP>
+nnoremap k <NOP>
+nnoremap l <NOP>
+
+"set highlights on for search items
+set hlsearch
 "set the with of tabstop to 4 spaces 
 set tabstop=4
 "make indentation to correnspond to one tab 
@@ -66,13 +78,13 @@ set wildmenu
 "Create a `tags` file lets vim run the below on cmd 
 command! MakeTags !ctags -R .
 "Disable auto format to include files without @format 
-let g:prettier#autoformat = 0
+"let g:prettier#autoformat = 0
 "Run prettier for every change async 
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
 
-let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
 "Change prettier print width 
 let g:prettier#config#print_width = 80
@@ -82,4 +94,6 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#semi = 'false'
 "Use flow to parse 
 let g:prettier#config#parser = 'flow'
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true' 
 
