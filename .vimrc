@@ -4,8 +4,6 @@ nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 nnoremap h <NOP>
-nnoremap j <NOP>
-nnoremap k <NOP>
 nnoremap l <NOP>
 
 "set highlights on for search items
